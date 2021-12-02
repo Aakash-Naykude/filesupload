@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 app.use(express.json())
-const fileController = require("./controllers/file.controller")
-app.use("/fileuploads", fileController)
+const userController = require("./controllers/user.controller")
+app.use("/useruploads", userController)
+const galleryController = require("./controllers/gallery.controller")
+app.use("/gallaryupload", galleryController)
 module.exports = app;

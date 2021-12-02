@@ -1,9 +1,9 @@
 const {Schema, model} = require("mongoose")
 
 const fileSchema = new Schema({
-    product:{type:String, required:true},
-    price:{type:Number, required:false},
-    image_url:[{type:String, required:true},]
+    first_name:{type:String, required:true},
+    last_name:{type:String, required:true},
+    profile_pic:{type:String, required:true}
 },{
     versionKey:false,
     timestamps: true
