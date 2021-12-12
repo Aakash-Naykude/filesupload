@@ -5,6 +5,7 @@ const upload = require("../middleware/upload")
 const fs = require("fs")
 const path = require("path")
 router.post("/", upload.single("profile_pic") , async (req, res)=>{
+    console.log(req.body)
     try{
         const newuser = await User.create({
             first_name:req.body.first_name,

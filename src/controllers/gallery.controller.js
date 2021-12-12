@@ -8,7 +8,7 @@ router.post("/", upload.any("pictures"), async (req, res) => {
   const filePaths = req.files.map((file) => file.path);
   try {
     const newuser = await Gallery.create({
-        pictures: filePaths,
+      pictures: filePaths,
       user_id: req.body.user_id,
     });
     return res.status(201).json({ newuser });
